@@ -2,13 +2,20 @@
   text-align: center;
 }
 
+.content {
+	margin: 8em;
+}
 .logoWildCircus{
 	float: left;
-	width: 2.8%;
+	width: 2.2%;
 	margin: 1em 0.5em 0.5em 1em !important;
 }
 
 .navigation{
 	float:right;
 	margin : 1em 0.5em 0.5em 1em !important;
+}
+
+.footer{
+	text-align: center;
 }
