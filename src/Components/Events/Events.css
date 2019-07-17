@@ -1,0 +1,10 @@
+.ant-row{
+  display: flex !important;
+  flex-flow: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.ant-card{
+  margin: 1em !important;
+}

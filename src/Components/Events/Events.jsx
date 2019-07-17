@@ -1,27 +1,46 @@
-import React from 'react';
-import { Card, Icon, Avatar } from 'antd';
-
-const { Meta } = Card;
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Card, Icon, Row } from 'antd';
+import './Events.css';
 
 export default function Events() {
+
+  const { Meta } = Card;
+  const [shows, setShows] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:8000/events')
+      .then((result) => {
+        setShows(result.data);
+      })
+  }, [])
+
   return (
-    <div>
-      <Card
-        style={{ width: 300 }}
-        cover={
-          <img
-            alt="example"
-            src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-          />
-        }
-        actions={[<Icon type="setting" />, <Icon type="edit" />, <Icon type="ellipsis" />]}
-      >
-        <Meta
-          avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-          title="Card title"
-          description="This is the description"
-        />
-      </Card>,
+    <div className="showCards">
+      <h1>Our Events</h1>
+      <Row>
+      {shows.map((show, index) => {
+        return (
+          <Card
+            style={{ width: 300 }}
+            cover={
+              <img
+                alt="Wild Circus event"
+                src={show.image}
+              />
+            }
+            actions={[<Icon type="ellipsis" />]}
+            hoverable= {true}
+          >
+            <Meta
+              title={show.name}
+              description={show.location, show.date}
+            />
+          </Card>
+        )
+      }
+      )}
+      </Row>
     </div>
   )
 }
