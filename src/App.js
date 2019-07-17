@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Layout, Menu } from 'antd';
-import Home from './Components/Home/Home'
+import Home from './Components/Home/Home';
+import Main from './Components/Main';
 import Logo from '../src/assets/images/star.png';
 import './App.css';
 import "antd/dist/antd.css";
@@ -50,7 +51,7 @@ function App() {
           </Menu>
         </Header>
         <Content className="content">
-          <Home/>
+          <Main />
         </Content>
       </Layout>
       <Footer className="footer">Made with love @WildCodeSchool</Footer>
