@@ -1,0 +1,16 @@
+.hero{
+  background-color: #fff !important;
+}
+.hero-bg{
+background-size: cover !important;
+width: auto !important;
+height: 70vh !important;
+}
+.media{
+  max-height: 12em;
+}
+
+.ant-row-flex-center{
+  margin-top: 6em !important;
+  margin-bottom: 2em !important;
+}

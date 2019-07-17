@@ -37,7 +37,7 @@ function App() {
             </Menu.Item>
             <Menu.Item key="about">
               <Link to="/about">
-                <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.google.fr" target="_blank" rel="noopener noreferrer">
                   About us
                 </a>
               </Link>
