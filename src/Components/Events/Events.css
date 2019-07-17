@@ -5,6 +5,15 @@
   align-items: center !important;
 }
 
+.ant-btn-round{
+  margin: 3em 1em 3em 1em !important;
+}
+
 .ant-card{
   margin: 1em !important;
 }
+/* 
+.ant-btn-primary{
+  background-color: aquamarine !important;
+  border-color: aqua !important;
+} */
