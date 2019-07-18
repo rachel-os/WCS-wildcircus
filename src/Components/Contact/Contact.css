@@ -1,0 +1,6 @@
+.contactForm {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-items: center !important;
+  margin: 6em 2em 2em 2em !important;
+}
