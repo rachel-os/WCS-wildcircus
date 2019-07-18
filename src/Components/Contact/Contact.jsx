@@ -16,57 +16,64 @@ export default function Contact() {
     wrapperCol: { span: 8, offset: 4 },
   };
 
-  const [contactDataSubmit, setContactDataSubmit ] = useState({
-    firstname:"",
-    lastname:"",
-    email:""
+  const [contactDataSubmit, setContactDataSubmit] = useState({
+    firstname: "",
+    lastname: "",
+    email: ""
   })
 
   const submitForm = () => {
+    console.log(contactDataSubmit);
     axios.post('http://localhost:8000/contact', contactDataSubmit)
-    .then((result) => {
-      console.log(result.data);
-    })
-    .catch((error) => {
-      console.log(error);
-    })
+      .then((result) => {
+        console.log(result.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
   }
- 
   return (
     <div>
       <h1>Contact us</h1>
       <img src={confetti} alt="human canon ball" />
       <div className="contactForm">
         <Col span={21}>
-        <Form.Item 
-          {...formItemLayout} 
-          label="First name"
-          onChange={(event) => setContactDataSubmit({...contactDataSubmit, firstname: event.target.value})}
+          <Form.Item
+            {...formItemLayout}
+            label="First name"
           >
-          <Input placeholder="Barnabé" />
-        </Form.Item>
-        <Form.Item 
-          {...formItemLayout} 
-          label="Last name"
-          onChange={(event) => setContactDataSubmit({...contactDataSubmit, lastname: event.target.value})}
+            <Input
+              placeholder="Barnabé"
+              onChange={(event) => setContactDataSubmit({ ...contactDataSubmit, firstname: event.target.value })}
+            />
+          </Form.Item>
+          <Form.Item
+            {...formItemLayout}
+            label="Last name"
           >
-          <Input placeholder="Collins" />
-        </Form.Item>
-        <Form.Item 
-        {...formItemLayout} 
-        label="Email"
-        onChange={(event) => setContactDataSubmit({...contactDataSubmit, email: event.target.value})}
-        >
-          <Input placeholder="barnabecollins@mail.com" />
-        </Form.Item>
-        <Form.Item {...formTailLayout}>
-          <Button 
-          type="primary" 
-          onClick={() => submitForm()}
+            <Input
+              placeholder="Collins"
+              onChange={(event) => setContactDataSubmit({ ...contactDataSubmit, lastname: event.target.value })}
+            />
+          </Form.Item>
+          <Form.Item
+            {...formItemLayout}
+            label="Email"
+            onChange={() => console.log('string')}
           >
-            Submit
+            <Input
+              placeholder="barnabecollins@mail.com"
+              onChange={(event) => setContactDataSubmit({ ...contactDataSubmit, email: event.target.value })}
+            />
+          </Form.Item>
+          <Form.Item {...formTailLayout}>
+            <Button
+              type="primary"
+              onClick={() => submitForm()}
+            >
+              Submit
         </Button>
-        </Form.Item>
+          </Form.Item>
         </Col>
       </div>
     </div>
