@@ -12,3 +12,16 @@
 .ant-card{
   margin: 1em !important;
 }
+
+.ant-btn:active, .ant-btn:focus{
+  color: #F25764 !important;
+  border-color: #F25764 !important;
+}
+
+.description{
+  padding : 1em;
+}
+.showtime{
+  font-size: 1.1em !important;
+  text-align: center !important;
+}

@@ -29,7 +29,7 @@ api.get('/',(req,res) => {
 })
 
 api.get('/events', (req, res) => {
-  connection.query("SELECT name, image, price, date, location_id FROM event", (error,result) => {
+  connection.query("SELECT id, name, image, price, date, location_id FROM event", (error,result) => {
     if (error) throw error;
     res.send(result);
   });

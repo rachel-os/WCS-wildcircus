@@ -13,13 +13,16 @@ export default function Events() {
   const [filterDate, setFilterDate] = useState(false);
 
 
+
   useEffect(() => {
     axios.get('http://localhost:8000/events')
       .then((result) => {
         setShows(result.data);
+        console.log(result.data.date)
       })
   }, [])
 
+  // filter buttons function 
   const filterShows = (tag, [setFunc, param]) => {
     if(param) {
       setShows(shows.reverse());
@@ -78,8 +81,13 @@ export default function Events() {
               hoverable={true}
               >
               <Meta
+                justify="center"
+                className="description"
                 title={<h3>{show.name}</h3>}
-                description={<p>{show.price}€</p>}
+                description={
+                <p className="showtime">{`${new Date(show.date).toUTCString()} ${show.price}€ `}
+                </p>
+              }
               />
             </Card>
             </div>
