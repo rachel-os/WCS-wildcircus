@@ -19,3 +19,12 @@
 .footer{
 	text-align: center;
 }
+
+.back-top{
+  background-color: #F25764 !important;
+  color: #fff !important;
+}
+
+.ant-back-top {
+  font-size: 2em !important;
+}

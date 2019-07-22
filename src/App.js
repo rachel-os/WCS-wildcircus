@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, BackTop, Icon } from 'antd';
 import Main from './Components/Main';
 import Logo from '../src/assets/images/star.png';
 import './App.css';
@@ -52,6 +52,11 @@ function App() {
         </Content>
       </Layout>
       <Footer className="footer">Made with love @WildCodeSchoolNantes</Footer>
+      <div>
+        <BackTop className="back-top">
+          <div className="ant-back-top-inner" justify="center"> <Icon type="arrow-up" /></div>
+        </BackTop>
+      </div>
     </div>
   );
 }

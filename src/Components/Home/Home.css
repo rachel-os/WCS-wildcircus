@@ -1,6 +1,11 @@
 .hero{
   background-color: #fff !important;
 }
+.title{
+  font-family: 'Elsie Swash Caps', cursive;
+  font-size: 5em;
+  color: #F25764;
+}
 .hero-bg{
 background-size: cover !important;
 width: auto !important;
@@ -13,4 +18,8 @@ height: 70vh !important;
 .ant-row-flex-center{
   margin-top: 6em !important;
   margin-bottom: 2em !important;
+}
+
+p{
+  text-align: left;
 }
