@@ -47,8 +47,6 @@ api.post('/contact', (req,res)=> {
   });
 });
 
-
-
 api.listen(8000,(error)=> {
   if(error) {
     console.log(error);

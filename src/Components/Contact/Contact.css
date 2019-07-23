@@ -4,3 +4,9 @@
   justify-items: center !important;
   margin: 6em 2em 2em 2em !important;
 }
+
+.ant-btn-primary{
+  background-color: #F25764 !important;
+  border-color: #F25764 !important;
+  color: #fff !important;
+}
